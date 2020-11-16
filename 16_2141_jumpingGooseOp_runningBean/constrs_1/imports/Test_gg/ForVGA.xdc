@@ -1,8 +1,8 @@
-# Clock signal
+## Clock signal
 set_property PACKAGE_PIN W5 [get_ports clk]							
 	set_property IOSTANDARD LVCMOS33 [get_ports clk]
 	create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
- 
+
 # Switches
 set_property PACKAGE_PIN V17 [get_ports {sw[0]}]					
 	set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]
@@ -62,6 +62,12 @@ set_property PACKAGE_PIN R19 [get_ports vsync]
 set_property PACKAGE_PIN U18 [get_ports reset]						
         set_property IOSTANDARD LVCMOS33 [get_ports reset]
         
+## LEDs
+set_property PACKAGE_PIN U16 [get_ports {led[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
+set_property PACKAGE_PIN E19 [get_ports {led[1]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
+
 ##Pmod Header JA
 ##Sch name = JA1
 set_property PACKAGE_PIN J1 [get_ports {JA[0]}]					
@@ -87,3 +93,15 @@ set_property PACKAGE_PIN L2 [get_ports {JA[1]}]
 ##Sch name = JA10
 #set_property PACKAGE_PIN G3 [get_ports {JA[7]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[7]}]
+
+##Buttons
+#set_property PACKAGE_PIN U18 [get_ports btnc]						
+#	set_property IOSTANDARD LVCMOS33 [get_ports btnc]
+#set_property PACKAGE_PIN T18 [get_ports btnU]						
+	#set_property IOSTANDARD LVCMOS33 [get_ports btnU]
+set_property PACKAGE_PIN W19 [get_ports btnL]						
+	set_property IOSTANDARD LVCMOS33 [get_ports btnL]
+set_property PACKAGE_PIN T17 [get_ports btnR]						
+	set_property IOSTANDARD LVCMOS33 [get_ports btnR]
+#set_property PACKAGE_PIN U17 [get_ports btnD]						
+	#set_property IOSTANDARD LVCMOS33 [get_ports btnD]

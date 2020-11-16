@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/15/2020 02:42:04 PM
+// Create Date: 16.11.2020 20:00:52
 // Design Name: 
-// Module Name: draw goose
+// Module Name: divide_G_jump
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,22 +20,20 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module draw_goose(
-    input [9:0] x,
-    input [9:0] y,
-    output goose
+module divide_G_jump(
+    input clk_in,
+    output clk_out
     );
+    reg elapsed;
+    reg [27:0] state;
     
-    reg isGoose;
-    reg height = 80, width = 60;   
-    reg posx = 100, posy = 380;
-    
-    always @(*)
-    begin
-        if ((posx <= x && x <= posx + width) && (posy >= y && y >= posy - height)) isGoose = 1;
-        else isGoose = 0;
-    end
-    
-    assign goose = isGoose;
+    always @(posedge clk_in)
+        if (state == 5000000) state <= 0;
+        else state <= state + 1;
+    always @(state)
+        if (state == 5000000) elapsed <= 1;
+        else elapsed <= 0;
+        
+    assign clk_out = elapsed;
     
 endmodule
