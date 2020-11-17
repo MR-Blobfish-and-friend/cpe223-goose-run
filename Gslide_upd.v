@@ -32,466 +32,466 @@ module Gslide(
     always @(*)
     begin
         assign isGoose = 0;
-        if( y == 80)
-            if(17 <= x && x <= 22)
+        if( y == 380)
+            if(115 <= x && x <= 120)
             begin
                 rgb_reg = 12'heb7;
                 isGoose = 1;
             end
-        else if( y == 79)
-            if(17 <= x && x <= 22)
+        else if( y == 379)
+            if(115 <= x && x <= 120)
             begin
                 rgb_reg = 12'heb7;
                 isGoose = 1;
             end
-        else if( y == 78)
-            if(17 <= x && x <= 18)
+        else if( y == 378)
+            if(115 <= x && x <= 116)
             begin
                 rgb_reg = 12'heb7;
                 isGoose = 1;
             end
-        else if( y == 77)
-            if((17 <= x && x <= 18)||(27 <= x && x <= 32))
+        else if( y == 377)
+            if((115 <= x && x <= 116)||(125 <= x && x <= 130))
             begin
                 rgb_reg = 12'he81;
                 isGoose = 1;
             end
-        else if( y == 76)
-            if((17 <= x && x <= 18)||(27 <= x && x <= 32))
+        else if( y == 376)
+            if((115 <= x && x <= 116)||(125 <= x && x <= 130))
             begin
                 rgb_reg = 12'he81;
                 isGoose = 1;
             end
-        else if( y == 75)
-            if(17 <= x && x <= 20)
+        else if( y == 375)
+            if(115 <= x && x <= 118)
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(27 <= x && x <= 28)
+            else if(125 <= x && x <= 126)
             begin
                 rgb_reg = 12'he81;
                 isGoose = 1;
             end
-        else if( y == 74)
-            if(17 <= x && x <= 20)
+        else if( y == 374)
+            if(115 <= x && x <= 118)
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(27 <= x && x <= 28)
+            else if(125 <= x && x <= 126)
             begin
                 rgb_reg = 12'he81;
                 isGoose = 1;
             end
-        else if( y == 73)
-            if((15 <= x && x <= 16)||(27 <= x && x <= 30))
+        else if( y == 373)
+            if((113 <= x && x <= 114)||(125 <= x && x <= 128))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(17 <= x && x <= 22)
+            else if(115 <= x && x <= 120)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-        else if( y == 72)
-            if((15 <= x && x <= 16)||(27 <= x && x <= 30))
+        else if( y == 372)
+            if((113 <= x && x <= 114)||(125 <= x && x <= 128))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(17 <= x && x <= 22)
+            else if(115 <= x && x <= 120)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 71)
-            if((15 <= x && x <= 16)||(27 <= x && x <= 30))
+       else if( y == 371)
+            if((113 <= x && x <= 114)||(125 <= x && x <= 128))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(17 <= x && x <= 22)
+            else if(115 <= x && x <= 120)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 70)
-            if((15 <= x && x <= 18)||(23 <= x && x <= 31))
+       else if( y == 370)
+            if((113 <= x && x <= 116)||(121 <= x && x <= 129))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(19 <= x && x <= 22)
+            else if(117 <= x && x <= 120)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 69)
-            if((15 <= x && x <= 18)||(23 <= x && x <= 31))
+       else if( y == 369)
+            if((113 <= x && x <= 116)||(121 <= x && x <= 129))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(19 <= x && x <= 22)
+            else if(117 <= x && x <= 120)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 68)
-            if((13 <= x && x <= 22)||(30 <= x && x <= 33))
+       else if( y == 368)
+            if((111 <= x && x <= 120)||(128 <= x && x <= 131))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(23 <= x && x <= 29)
+            else if(121 <= x && x <= 127)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 67)
-            if((13 <= x && x <= 22)||(30 <= x && x <= 33))
+       else if( y == 367)
+            if((111 <= x && x <= 120)||(128 <= x && x <= 131))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(23 <= x && x <= 29)
+            else if(121 <= x && x <= 127)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 66)
-            if((11 <= x && x <= 12)||(19 <= x && x <= 20)||(32 <= x && x <= 34))
+       else if( y == 366)
+            if((109 <= x && x <= 110)||(117 <= x && x <= 118)||(130 <= x && x <= 132))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((13 <= x && x <= 18)||(21 <= x && x <= 31))
+            else if((111 <= x && x <= 116)||(119 <= x && x <= 129))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 65)
-            if((11 <= x && x <= 12)||(19 <= x && x <= 20)||(32 <= x && x <= 35))
+       else if( y == 365)
+            if((109 <= x && x <= 110)||(117 <= x && x <= 118)||(130 <= x && x <= 133))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((13 <= x && x <= 18)||(21 <= x && x <= 31))
+            else if((111 <= x && x <= 116)||(119 <= x && x <= 129))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 64)
-            if((11 <= x && x <= 12)||(19 <= x && x <= 20)||(32 <= x && x <= 36))
+       else if( y == 364)
+            if((109 <= x && x <= 110)||(117 <= x && x <= 118)||(130 <= x && x <= 134))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((13 <= x && x <= 18)||(21 <= x && x <= 31))
+            else if((111 <= x && x <= 116)||(119 <= x && x <= 129))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 63)
-            if((9 <= x && x <= 10)||(21 <= x && x <= 22)||(34 <= x && x <= 37))
+       else if( y == 363)
+            if((107 <= x && x <= 108)||(119 <= x && x <= 120)||(132 <= x && x <= 135))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((11 <= x && x <= 20)||(23 <= x && x <= 33))
+            else if((109 <= x && x <= 118)||(121 <= x && x <= 131))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 62)
-            if((9 <= x && x <= 10)||(21 <= x && x <= 22)||(34 <= x && x <= 37))
+       else if( y == 362)
+            if((107 <= x && x <= 108)||(119 <= x && x <= 120)||(132 <= x && x <= 135))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((11 <= x && x <= 20)||(23 <= x && x <= 33))
+            else if((109 <= x && x <= 118)||(121 <= x && x <= 131))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 61)
-            if((7 <= x && x <= 12)||(23 <= x && x <= 24)||(36 <= x && x <= 37))
+       else if( y == 361)
+            if((105 <= x && x <= 110)||(121 <= x && x <= 122)||(134 <= x && x <= 135))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((13 <= x && x <= 22)||(25 <= x && x <= 35))
+            else if((111 <= x && x <= 120)||(123 <= x && x <= 133))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 60)
-            if((7 <= x && x <= 12)||(23 <= x && x <= 24)||(36 <= x && x <= 38))
+       else if( y == 360)
+            if((105 <= x && x <= 110)||(121 <= x && x <= 122)||(134 <= x && x <= 136))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((13 <= x && x <= 22)||(25 <= x && x <= 35))
+            else if((111 <= x && x <= 120)||(123 <= x && x <= 133))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 59)
-            if((5 <= x && x <= 8)||(37 <= x && x <= 38))
+       else if( y == 359)
+            if((103 <= x && x <= 106)||(135 <= x && x <= 136))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((9 <= x && x <= 36))
+            else if((107 <= x && x <= 134))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 58)
-            if((5 <= x && x <= 8)||(37 <= x && x <= 38))
+       else if( y == 358)
+            if((103 <= x && x <= 106)||(135 <= x && x <= 136))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((9 <= x && x <= 36))
+            else if((107 <= x && x <= 134))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 57)
-            if((4 <= x && x <= 5)||(7 <= x && x <= 8)||(37 <= x && x <= 38))
+       else if( y == 357)
+            if((102 <= x && x <= 103)||(105 <= x && x <= 106)||(135 <= x && x <= 136))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((x == 6)||(9 <= x && x <= 36))
+            else if((x == 104)||(107 <= x && x <= 134))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 56)
-            if((4 <= x && x <= 5)||(7 <= x && x <= 8)||(38 <= x && x <= 39))
+       else if( y == 356)
+            if((102 <= x && x <= 103)||(105 <= x && x <= 106)||(135 <= x && x <= 136))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((x == 6)||(9 <= x && x <= 37))
+            else if((x == 104)||(107 <= x && x <= 134))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-       else if( y == 55)
-            if((4 <= x && x <= 5)||(7 <= x && x <= 8)||(38 <= x && x <= 39))
+       else if( y == 355)
+            if((102 <= x && x <= 103)||(105 <= x && x <= 106)||(135 <= x && x <= 136))
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((x == 6)||(9 <= x && x <= 37))
+            else if((x == 104)||(107 <= x && x <= 134))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-        else if( y == 54)
-            if(38 <= x && x <= 39)
+        else if( y == 354)
+            if(136 <= x && x <= 137)
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(2 <= x && x <= 37)
+            else if(100 <= x && x <= 135)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-        else if( y == 53)
-            if(x == 39)
+        else if( y == 353)
+            if(x == 137)
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(2 <= x && x <= 38)
+            else if(100 <= x && x <= 136)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-        else if( y == 52)
-            if(x == 40)
+        else if( y == 352)
+            if(x == 138)
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((2 <= x && x <= 6)||(11 <= x && x <= 39))
+            else if((100 <= x && x <= 104)||(109 <= x && x <= 137))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-        else if( y == 51)
-            if(x == 41)
+        else if( y == 351)
+            if(x == 139)
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((2 <= x && x <= 6)||(11 <= x && x <= 40))
+            else if((100 <= x && x <= 104)||(109 <= x && x <= 138))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-        else if( y == 50)
-            if(x == 42)
+        else if( y == 350)
+            if(x == 140)
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((2 <= x && x <= 3)||(15 <= x && x <= 41))
+            else if((100 <= x && x <= 101)||(113 <= x && x <= 138))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-        else if( y == 49)
-            if(42 <= x && x <= 44)
+        else if( y == 349)
+            if(140 <= x && x <= 142)
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((2 <= x && x <= 3)||(15 <= x && x <= 41))
+            else if((100 <= x && x <= 101)||(113 <= x && x <= 138))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-        else if( y == 48)
-            if(43 <= x && x <= 45)
+        else if( y == 348)
+            if(141 <= x && x <= 143)
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((2 <= x && x <= 3)||(15 <= x && x <= 42))
+            else if((100 <= x && x <= 101)||(113 <= x && x <= 140))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-        else if( y == 47)
-            if(44 <= x && x <= 49)
+        else if( y == 347)
+            if(142 <= x && x <= 147)
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(19 <= x && x <= 43)
+            else if(117 <= x && x <= 141)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-            else if(50 <= x && x <= 59)
+            else if(148 <= x && x <= 157)
             begin
                 rgb_reg = 12'he81;
                 isGoose = 1;
             end
-        else if( y == 46)
-            if(46 <= x && x <= 49)
+        else if( y == 346)
+            if(144 <= x && x <= 147)
             begin
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if(38 <= x && x <= 45)
+            else if(136 <= x && x <= 143)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-            else if(50 <= x && x <= 59)
+            else if(148 <= x && x <= 157)
             begin
                 rgb_reg = 12'he81;
                 isGoose = 1;
             end
-        else if( y == 45)
-            if(40 <= x && x <= 49)
+        else if( y == 345)
+            if(138 <= x && x <= 147)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-            else if(50 <= x && x <= 57)
+            else if(148 <= x && x <= 155)
             begin
                 rgb_reg = 12'heb7;
                 isGoose = 1;
             end
-        else if( y == 44)
-            if(40 <= x && x <= 49)
+        else if( y == 344)
+            if(138 <= x && x <= 147)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-            else if(50 <= x && x <= 57)
+            else if(148 <= x && x <= 155)
             begin
                 rgb_reg = 12'heb7;
                 isGoose = 1;
             end
-        else if( y == 43)
-            if(42 <= x && x <= 51)
+        else if( y == 343)
+            if(140 <= x && x <= 149)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-            else if(52 <= x && x <= 55)
+            else if(150 <= x && x <= 153)
             begin
                 rgb_reg = 12'heb7;
                 isGoose = 1;
             end
-        else if( y == 42)
-            if(42 <= x && x <= 51)
+        else if( y == 342)
+            if(140 <= x && x <= 149)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-            else if(52 <= x && x <= 55)
+            else if(150 <= x && x <= 153)
             begin
                 rgb_reg = 12'heb7;
                 isGoose = 1;
             end
-        else if( y == 41)
-            if((42 <= x && x <= 47)||(50 <= x && x <= 51))
+        else if( y == 341)
+            if((140 <= x && x <= 145)||(148 <= x && x <= 149))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-            else if(52 <= x && x <= 53)
+            else if(146 <= x && x <= 147)
+            begin
+                rgb_reg = 12'h000;
+                isGoose = 1;
+            end
+            else if(150 <= x && x <= 151)
             begin
                 rgb_reg = 12'heb7;
                 isGoose = 1;
             end
-            else if(48 <= x && x <= 49)
-            begin
-                rgb_reg = 12'heb7;
-                isGoose = 1;
-            end
-        else if( y == 40)
-            if((42 <= x && x <= 47)||(50 <= x && x <= 51))
+        else if( y == 340)
+            if((140 <= x && x <= 145)||(148 <= x && x <= 149))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-            else if(52 <= x && x <= 53)
+            else if(146 <= x && x <= 147)
+            begin
+                rgb_reg = 12'h000;
+                isGoose = 1;
+            end
+            else if(150 <= x && x <= 151)
             begin
                 rgb_reg = 12'heb7;
                 isGoose = 1;
             end
-            else if(48 <= x && x <= 49)
-            begin
-                rgb_reg = 12'heb7;
-                isGoose = 1;
-            end
-        else if( y == 39)
-            if(42 <= x && x <= 51)
+        else if( y == 339)
+            if(140 <= x && x <= 149)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
         else if( y == 38)
-            if(44 <= x && x <= 51)
+            if(142 <= x && x <= 149)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
         else if( y == 37)
-            if(44 <= x && x <= 51)
+            if(142 <= x && x <= 149)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
