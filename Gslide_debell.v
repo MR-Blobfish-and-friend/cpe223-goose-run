@@ -343,7 +343,7 @@ module Gslide(
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((100 <= x && x <= 101)||(113 <= x && x <= 138))
+            else if((100 <= x && x <= 101)||(113 <= x && x <= 139))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
@@ -354,7 +354,7 @@ module Gslide(
                 rgb_reg = 12'hdef;
                 isGoose = 1;
             end
-            else if((100 <= x && x <= 101)||(113 <= x && x <= 138))
+            else if((100 <= x && x <= 101)||(113 <= x && x <= 139))
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
@@ -484,13 +484,13 @@ module Gslide(
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-        else if( y == 38)
+        else if( y == 338)
             if(142 <= x && x <= 149)
             begin
                 rgb_reg = 12'hfff;
                 isGoose = 1;
             end
-        else if( y == 37)
+        else if( y == 337)
             if(142 <= x && x <= 149)
             begin
                 rgb_reg = 12'hfff;
