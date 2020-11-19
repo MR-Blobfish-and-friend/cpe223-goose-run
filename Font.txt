@@ -1,0 +1,195 @@
+
+// Charector "N" column 
+	if(draw_char[0]) begin // N
+		if(posx == x || (posx+1) == x || (posx+8) == x || (posx+9) == x) begin
+			isChar = 1;
+		end
+		else if((posx+2) == x) begin
+			if((posy+3) <= y && y <= (posy+6)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+3) == x) begin
+			if((posy+5) <= y && y <= (posy+8)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+4) == x) begin
+			if((posy+7) <= y && y <= (posy+10)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+5) == x) begin
+			if((posy+9) <= y && y <= (posy+12)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+6) == x) begin
+			if((posy+11) <= y && y <= (posy+14)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+7) == x) begin
+			if((posy+13) <= y && y <= (posy+16)) begin
+				isChar = 1;
+			end
+		end
+	end
+	else if(draw_char[1]) begin // E
+		if(posy == y || (posy+1) == y || (posy+9) == y || (posy+10) == y || (posy+18) == y || (posy+19) == y) begin
+			isChar = 1;
+		end 
+		else if(((posy+9) <= y && y <= (posy+10))) begin
+			if(posx <= x && x <= (posx+1)) begin
+				isChar = 1;
+			end
+		end
+		else if(((posy+2) <= y && y <= (posy+8)) || (posy+11) <= y && y <= (posy+17)) begin
+			if(posx <= x && x <= (posx+1)) begin
+				isChar = 1;
+			end
+		end
+	end
+	else if(draw_char[2]) begin // W
+		if(posx == x || (posx+1) == x || (posx+8) == x || (posx+9) == x) begin
+			isChar = 1;
+		end
+		else if((posx+2) == x || (posx+7) == x) begin
+			if((posy+13) <= y && y <= (posy+16)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+3) == x || (posx+6) == x) begin
+			if((posy+11) <= y && y <= (posy+14)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+4) <= x && x <= (posx+5)) begin
+			if((posy+9) <= y && y <= (posy+12)) begin
+				isChar = 1;
+			end
+		end
+	end
+	else if(draw_char[3]) begin // G
+		if(posy == y || (posy+1) == y || (posy+18) == y || (posy+19) == y) begin
+			if((posx+2) <= x && x <= (posx+7)) begin
+				isChar = 1;
+			end
+		end 
+		else if(((posy+2) <= y && y <= (posy+8))) begin
+			if(posx <= x && x <= (posx+1)) begin
+				isChar = 1;
+			end
+		end
+		else if(((posy+9) <= y && y <= (posy+10))) begin
+			if((posx <= x && x <= (posx+1)) || ((pos+5) <= x && x <= (pos+9)) begin
+				isChar = 1;
+			end
+		end
+		else if(((posy+11) <= y && y <= (posy+17))) begin
+			if((posx <= x && x <= (posx+1)) || ((pos+8) <= x && x <= (pos+9)) begin
+				isChar = 1;
+			end
+		end
+	end
+	else if(draw_char[4]) begin // A
+		if(posx == x || (posx+1) == x || (posx+8) == x || (posx+9) == x) begin
+			if((posy+4) <= y && y <= (posy+19)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+2) <= x && x <= (posx+3) || (posx+6) <= x && x <= (posx+7)) begin
+			if(((posy+2) <= y && y <= (posy+3)) || ((posy+10) <= y && y <= (posy+11))) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+4) <= x && x <= (posx+5)) begin
+			if(((posy) <= y && y <= (posy+1)) || ((posy+10) <= y && y <= (posy+11))) begin
+				isChar = 1;
+			end
+		end
+	end
+	else if(draw_char[5]) begin // M
+		if(posx == x || (posx+1) == x || (posx+8) == x || (posx+9) == x) begin
+			isChar = 1;
+		end
+		else if((posx+2) == x || (posx+7) == x) begin
+			if((posy+13) <= y && y <= (posy+16)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+3) == x || (posx+6) == x) begin
+			if((posy+11) <= y && y <= (posy+14)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+4) <= x && x <= (posx+5)) begin
+			if((posy+7) <= y && y <= (posy+10)) begin
+				isChar = 1;
+			end
+		end
+	end
+	else if(draw_char[6]) begin // H
+		if(posx == x || (posx+1) == x || (posx+8) == x || (posx+9) == x) begin
+			isChar = 1;
+		end
+		else if((posx+2) <= x && x <= (posx+7)) begin
+			if((posy+9) <= y && y <= (posy+10)) begin
+				isChar = 1;
+			end
+		end
+	end
+	else if(draw_char[7]) begin // I
+		if(((posx+2) <= x && x <= (posx+3)) || ((posx+6) <= x && x <= (posx+7))) begin
+			if(((posy) <= y && y <= (posy+1)) || ((posy+18) <= y && y <= (posy+19)))begin
+				isChar = 1;
+			end
+		end
+		else if((posx+4) <= x && x <= (posx+5)) begin
+			isChar = 1;
+		end
+	end
+	else if(draw_char[8]) begin // O
+		if((posx+2) <= x && x <= (posx+7)) begin
+			if(((posy) <= y && y <= (posy+1)) || ((posy+18) <= y && y <= (posy+19)))begin
+				isChar = 1;
+			end
+		end
+		else if(((posx) <= x && x <= (posx+1)) || ((posx+8) <= x && x <= (posx+9))) begin
+			if((posy+2) <= y && y <= (posy+17))begin
+				isChar = 1;
+			end
+		end
+	end
+	else if(draw_char[9]) begin // V
+		if(posx == x || (posx+1) == x || (posx+8) == x || (posx+9) == x) begin
+			if((posy) <= y && y <= (posy+15)) begin
+				isChar = 1;
+			end
+		end
+		else if(((posx+2) <= x && x <= (posx+3))|| ((posx+6) <= x && x <= (posx+7))) begin
+			if((posy+16) <= y && y <= (posy+17)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+4) <= x && x <= (posx+5)) begin
+			if((posy+18) <= y && y <= (posy+19)) begin
+				isChar = 1;
+			end
+		end
+	end
+	else if(draw_char[10]) begin // R
+		if(posx <= x && x <= (posx+1)) begin
+			isChar = 1;
+		end
+		else if((posx+2) <= x && x <= (posx+7)) begin
+			if((posy) <= y && y <= (posy+1) || (posy+9) <= y && y <= (posy+10)) begin
+				isChar = 1;
+			end
+		end
+		else if((posx+8) <= x && x <= (posx+9)) begin
+			if((posy+2) <= y && y <= (posy+8) || (posy+11) <= y && y <= (posy+19)) begin
+				isChar = 1;
+			end
+		end
+	end
