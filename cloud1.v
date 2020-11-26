@@ -458,7 +458,7 @@ module cloud1(
             end
         end
         
-        if (phase==3) begin
+        if (phase==4) begin
             if (y == 27) begin
                 if (p-15 <= x && x <= p-7) begin
                     rgb_reg = 12'hfff;
@@ -1109,7 +1109,7 @@ module cloud1(
             end
         end
         
-        else if (phase==4) begin
+        else if (phase==5) begin
             if (y == 32) begin
                 if (x == p-127) begin 
                     rgb_reg = 12'hfff;
