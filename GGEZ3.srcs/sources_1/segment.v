@@ -31,16 +31,14 @@
 // 9 => 1111011
 
 module segment(
-    input [9:0] x, y,
-    input [9:0] segx, segy,
-    input [3:0] num,
+    input [9:0] x, y, segx, segy,
+    input [31:0] num,
     output isSeg
-    );
-    
+    );    
     reg isSeg_reg;
     reg [6:0] seg;
     
-    always @(num) begin
+    always @(num)
         case(num)
             0: seg = 7'b1111110;
             1: seg = 7'b0110000;
@@ -54,46 +52,45 @@ module segment(
             9: seg = 7'b1111011;
             default: seg = 7'b1001001;
         endcase
-    end
     
     always @(num)
     begin
-            isSeg_reg = 0;
-            if(seg[0]) begin
-                if(((segy + 9) <= y && y <= (segy + 10)) && ((segx + 2) <= x && x <= (segx + 7))) begin
-                    isSeg_reg = 1;
-                end
+        isSeg_reg = 0;
+        if(seg[0]) begin
+            if(((segy + 9) <= y && y <= (segy + 10)) && ((segx + 2) <= x && x <= (segx + 7))) begin
+                isSeg_reg = 1;
             end
-            if(seg[1]) begin
-                if(((segy + 2) <= y && y <= (segy + 8)) && ((segx) <= x && x <= (segx + 1))) begin
-                    isSeg_reg = 1;
-                end
+        end
+        if(seg[1]) begin
+            if(((segy + 2) <= y && y <= (segy + 8)) && ((segx) <= x && x <= (segx + 1))) begin
+                isSeg_reg = 1;
             end
-            if(seg[2]) begin
-                if(((segy + 11) <= y && y <= (segy + 17)) && ((segx) <= x && x <= (segx + 1))) begin
-                    isSeg_reg = 1;
-                end
-            end    
-            if(seg[3] == 1) begin
-                if(((segy + 18) <= y && y <= (segy + 19)) && ((segx + 2) <= x && x <= (segx + 7))) begin
-                    isSeg_reg = 1;
-                end
+        end
+        if(seg[2]) begin
+            if(((segy + 11) <= y && y <= (segy + 17)) && ((segx) <= x && x <= (segx + 1))) begin
+                isSeg_reg = 1;
             end
-            if(seg[4] == 1) begin
-                if(((segy + 11) <= y && y <= (segy + 17)) && ((segx + 8) <= x && x <= (segx + 9))) begin
-                    isSeg_reg = 1;
-                end
+        end    
+        if(seg[3] == 1) begin
+            if(((segy + 18) <= y && y <= (segy + 19)) && ((segx + 2) <= x && x <= (segx + 7))) begin
+                isSeg_reg = 1;
             end
-            if(seg[5] == 1) begin
-                if(((segy + 2) <= y && y <= (segy + 8)) && ((segx + 8) <= x && x <= (segx + 9))) begin
-                    isSeg_reg = 1;
-                end
-            end    
-            if(seg[6] == 1) begin
-                if(((segy) <= y && y <= (segy + 1)) && ((segx + 2) <= x && x <= (segx + 7))) begin
-                    isSeg_reg = 1;
-                end
+        end
+        if(seg[4] == 1) begin
+            if(((segy + 11) <= y && y <= (segy + 17)) && ((segx + 8) <= x && x <= (segx + 9))) begin
+                isSeg_reg = 1;
             end
+        end
+        if(seg[5] == 1) begin
+            if(((segy + 2) <= y && y <= (segy + 8)) && ((segx + 8) <= x && x <= (segx + 9))) begin
+                isSeg_reg = 1;
+            end
+        end    
+        if(seg[6] == 1) begin
+            if(((segy) <= y && y <= (segy + 1)) && ((segx + 2) <= x && x <= (segx + 7))) begin
+                isSeg_reg = 1;
+            end
+        end
     end
     
     assign isSeg = isSeg_reg;

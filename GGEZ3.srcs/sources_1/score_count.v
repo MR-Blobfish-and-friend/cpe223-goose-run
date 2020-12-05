@@ -25,19 +25,13 @@ module score_count(
     input hit,
     input reset,
     output [31:0] score
-    );
+    );    
+    integer score_reg = 0;
     
-    reg [31:0] score_reg;
-    
-    initial begin
-        score_reg = 0;
-    end
-    
-    always @(posedge clk or posedge reset) begin
+    always @(posedge clk or negedge reset) begin
         if (reset) score_reg = 0;
         else if (~hit) score_reg = score_reg + 1;
     end
     
-    assign score = score_reg;
-    
+    assign score = score_reg;    
 endmodule

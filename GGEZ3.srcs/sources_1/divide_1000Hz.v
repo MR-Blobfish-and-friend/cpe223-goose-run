@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 15.11.2020 21:04:32
+// Create Date: 12/04/2020 08:38:23 PM
 // Design Name: 
-// Module Name: divide_25Hz
+// Module Name: divide_1000Hz
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,18 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module divide_25Hz(
+module divide_1000Hz(
     input clk_in,
     output clk_out
     );
     reg elapsed;
-    reg [21:0] state;
+    reg [16:0] state;
     
     always @(posedge clk_in)
-        if (state == 4000000) state <= 0;
+        if (state == 100000) state <= 0;
         else state <= state + 1;
     always @(state)
-        if (state == 4000000) elapsed <= 1;
+        if (state == 100000) elapsed <= 1;
         else elapsed <= 0;
         
     assign clk_out = elapsed;

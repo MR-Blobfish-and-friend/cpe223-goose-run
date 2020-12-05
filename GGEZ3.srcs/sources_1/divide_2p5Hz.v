@@ -25,7 +25,7 @@ module divide_2p5Hz(
     output clk_out
     );
     reg elapsed;
-    reg [27:0] state;
+    reg [25:0] state;
     
     always @(posedge clk_in)
         if (state == 40000000) state <= 0;
