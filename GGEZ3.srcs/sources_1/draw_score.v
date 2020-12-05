@@ -25,8 +25,7 @@ module draw_score(
     input [31:0] score,
     output isScore,
     output [11:0] score_rgb
-    );
-    
+    );    
     wire isUnit, isTen, isHund, isThou;
     integer unit, ten, hund, thou;
     
@@ -39,9 +38,9 @@ module draw_score(
     
     always @(score) begin
         unit = score%10;
-        ten = (score%100 - unit)/10;
-        hund = (score%1000 - ten - unit)/100;
-        thou = (score - hund - ten - unit)/1000;
+        ten = (score%100)/10;
+        hund = (score%1000)/100;
+        thou = score/1000;
     end
     
     //current score
@@ -51,6 +50,5 @@ module draw_score(
     segment thou1(.x(x), .y(y), .segx(565), .segy(20), .num(thou), .isSeg(isThou));
     
     assign isScore = isUnit || isTen || isHund || isThou;    
-    assign score_rgb = 12'hfff;
-    
+    assign score_rgb = 12'hfff;    
 endmodule

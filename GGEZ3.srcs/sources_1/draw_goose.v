@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-`include"draw_goose_graphic.vh"
+`include"draw_goose_graphic.v"
 //include these task:
 //  draw_goose_run
 //  draw_goose_slide
@@ -44,7 +44,7 @@ module draw_goose(
     integer jumpCount = 0;
     integer jumpList [0:30];
     reg [11:0] rgb_reg;
-    reg hit_ctrl;
+    reg hit_ctrl = 0;
     wire clk_leg;
     reg goose_leg = 0;
     
@@ -82,7 +82,6 @@ module draw_goose(
         jumpList[28] = -9;
         jumpList[29] = -12;
         jumpList[30] = -15;
-        hit_ctrl = 0;
     end  
      
     divider_leg l1(clk, clk_leg);    

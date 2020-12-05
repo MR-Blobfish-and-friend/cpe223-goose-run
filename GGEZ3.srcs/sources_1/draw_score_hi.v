@@ -39,9 +39,9 @@ module draw_score_hi(
     
     always @(score_hi) begin
         unit_hi = score_hi%10;
-        ten_hi = (score_hi%100 - unit_hi)/10;
-        hund_hi = (score_hi%1000 - ten_hi - unit_hi)/100;
-        thou_hi = (score_hi - hund_hi - ten_hi - unit_hi)/1000;
+        ten_hi = (score_hi%100)/10;
+        hund_hi = (score_hi%1000)/100;
+        thou_hi = score_hi/1000;
     end
     
     //hi score

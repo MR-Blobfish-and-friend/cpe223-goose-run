@@ -24,8 +24,7 @@ module draw_sky(
     input [9:0] x, y,
     output sky,
     output [11:0] sky_rgb
-    );
-    
+    );    
     reg isSky;
     reg [11:0] rgb_reg;
     
@@ -56,6 +55,5 @@ module draw_sky(
     end
     
     assign sky = isSky;
-    assign sky_rgb = rgb_reg;
-        
+    assign sky_rgb = rgb_reg;        
 endmodule
