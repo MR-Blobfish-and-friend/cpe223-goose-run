@@ -21,7 +21,7 @@
 
 
 module start(
-    input x, y,
+    input [9:0] x, y,
     output [11:0] rgb,
     output isStart_reg
     );
@@ -29,8 +29,8 @@ module start(
     reg [11:0] rgb_reg;
     reg isStart;
     
-    always @(*) begin
-        assign isStart = 0;
+    always @(x or y) begin
+        isStart = 0;
         if (106 <= y && y <= 107) begin
             if (286 <= x && x <= 301) begin
                 rgb_reg = 12'hfff;
@@ -734,7 +734,7 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (304 <= x && x <= 330) begin
+            else if (303 <= x && x <= 330) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -809,7 +809,7 @@ module start(
                 isStart = 1;
             end
         end
-        else if (y <= 185 && y <= 188) begin
+        else if (185 <= y && y <= 188) begin
             if (232 <= x && x <= 302) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
@@ -851,7 +851,7 @@ module start(
                 isStart = 1;
             end
         end
-        else if (y <= 189 && y <= 190) begin
+        else if (189 <= y && y <= 190) begin
             if (232 <= x && x <= 301) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
@@ -897,7 +897,7 @@ module start(
                 isStart = 1;
             end
         end
-        else if (y <= 191 && y <= 192) begin
+        else if (191 <= y && y <= 192) begin
             if (232 <= x && x <= 299) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
@@ -943,7 +943,7 @@ module start(
                 isStart = 1;
             end
         end
-        else if (y <= 193 && y <= 194) begin
+        else if (193 <= y && y <= 194) begin
             if (232 <= x && x <= 298) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
@@ -989,7 +989,7 @@ module start(
                 isStart = 1;
             end
         end
-        else if (y <= 195 && y <= 197) begin
+        else if (195 <= y && y <= 197) begin
             if (232 <= x && x <= 297) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
