@@ -29,7 +29,7 @@ module start(
     reg [11:0] rgb_reg;
     reg isStart;
     
-    always @(x or y) begin
+    always @(*) begin
         isStart = 0;
         if (106 <= y && y <= 107) begin
             if (286 <= x && x <= 301) begin
@@ -49,7 +49,7 @@ module start(
                 isStart = 1;
             end
             else if (293 <= x && x <= 297) begin
-                rgb_reg = 12'hfff;
+                rgb_reg = 12'h000;
                 isStart = 1;
             end
             else if (302 <= x && x <= 306) begin
@@ -63,7 +63,7 @@ module start(
                 isStart = 1;
             end
             else if (293 <= x && x <= 297) begin
-                rgb_reg = 12'hfff;
+                rgb_reg = 12'h000;
                 isStart = 1;
             end
             else if (302 <= x && x <= 306) begin
@@ -77,7 +77,7 @@ module start(
                 isStart = 1;
             end
             else if (293 <= x && x <= 297) begin
-                rgb_reg = 12'hfff;
+                rgb_reg = 12'h000;
                 isStart = 1;
             end
             else if (302 <= x && x <= 306) begin
@@ -256,7 +256,9 @@ module start(
             end
         end
         else if (y == 168) begin
-            if (232 <= x && x <= 244) begin
+            if ((232 <= x && x <= 244) || (342 <= x && x <= 350) || 
+                (360 <= x && x <= 368) || (378 <= x && x <= 386) || 
+                (393 <= x && x <= 407)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -264,14 +266,11 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((342 <= x && x <= 350) || (360 <= x && x <= 368) || 
-                    (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
         end
         else if (y == 169) begin
-            if ((232 <= x && x <= 244) || (271 <= x && x <= 286)) begin
+            if ((232 <= x && x <= 244) || (271 <= x && x <= 286) ||
+                (342 <= x && x <= 350) || (360 <= x && x <= 368) ||
+                (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -279,103 +278,81 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((342 <= x && x <= 350) || (360 <= x && x <= 368) ||
-                    (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
         end
         else if (y == 170) begin
             if ((232 <= x && x <= 244) || (265 <= x && x <= 295) ||
-                (x == 330)) begin
+                (x == 330) || (342 <= x && x <= 350) || (360 <= x && x <= 368) ||
+                (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
             else if ((245 <= x && x <= 249) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if ((342 <= x && x <= 350) || (360 <= x && x <= 368) ||
-                    (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
-                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
         else if (y == 171) begin
             if ((232 <= x && x <= 244) || (262 <= x && x <= 303) ||
-                (329 <= x && x <= 330)) begin
+                (329 <= x && x <= 330) || (339 <= x && x <= 341) || 
+                (351 <= x && x <= 353) || (357 <= x && x <= 359) || 
+                (369 <= x && x <= 371) || (375 <= x && x <= 377) || 
+                (387 <= x && x <= 389) || (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
             else if ((245 <= x && x <= 249) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
-                (357 <= x && x <= 359) || (369 <= x && x <= 371) || 
-                (375 <= x && x <= 377) || (387 <= x && x <= 389) || 
-                (393 <= x && x <= 395)) begin
-                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
         else if (y == 172) begin
             if ((232 <= x && x <= 244) || (258 <= x && x <= 310) ||
-                (328 <= x && x <= 330)) begin
+                (328 <= x && x <= 330) || (339 <= x && x <= 341) || 
+                (351 <= x && x <= 353) || (393 <= x && x <= 395) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) || 
+                (375 <= x && x <= 377) || (387 <= x && x <= 389)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
             else if ((245 <= x && x <= 249) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
-                (357 <= x && x <= 359) || (369 <= x && x <= 371) || 
-                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
-                (393 <= x && x <= 395)) begin
-                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
         else if (y == 173) begin
             if ((232 <= x && x <= 244) || (255 <= x && x <= 313) ||
-                (328 <= x && x <= 330)) begin
+                (328 <= x && x <= 330) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
             else if ((245 <= x && x <= 249) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
-                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
-                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
-                (393 <= x && x <= 395)) begin
-                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
         else if (y == 174) begin
             if ((232 <= x && x <= 244) || (253 <= x && x <= 315) ||
-                (326 <= x && x <= 330)) begin
+                (326 <= x && x <= 330) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
             else if ((245 <= x && x <= 249) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
-                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
-                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
-                (393 <= x && x <= 395)) begin
-                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
         else if (y == 175) begin
             if ((232 <= x && x <= 244) || (251 <= x && x <= 317) ||
-                (324 <= x && x <= 330)) begin
+                (324 <= x && x <= 330) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -383,49 +360,36 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+        end
+        else if (y == 176) begin
+            if ((232 <= x && x <= 330) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
                 (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
                 (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
                 (393 <= x && x <= 395)) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-        end
-        else if (y == 176) begin
-            if (232 <= x && x <= 330) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
             else if (331 <= x && x <= 333) begin
                 rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
-                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
-                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
-                (393 <= x && x <= 395)) begin
-                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
         else if (177 <= y && y <= 180) begin
-            if (232 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+            if ((232 <= x && x <= 330) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
                 (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
                 (375 <= x && x <= 377) || (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
+            else if (331 <= x && x <= 333) begin
+                rgb_reg = 12'hdef;
+                isStart = 1;
+            end
         end
         else if (181 <= y && y <= 182) begin
-            if (232 <= x && x <= 330) begin
+            if ((232 <= x && x <= 330) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -433,28 +397,22 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
-                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
-                (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
         end
         else if (y == 183) begin
-            if ((232 <= x && x <= 269) || (304 <= x && x <= 330)) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if ((270 <= x && x <= 302) || (331 <= x && x <= 333) ||
+            if ((232 <= x && x <= 269) || (304 <= x && x <= 330) ||
+                (270 <= x && x <= 303) || (331 <= x && x <= 333) ||
                 (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
                 (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
                 (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
-                rgb_reg = 12'hdef;
+                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
         else if (y == 184) begin
-            if ((232 <= x && x <= 266) || (305 <= x && x <= 330)) begin
+            if ((232 <= x && x <= 266) || (305 <= x && x <= 330) ||
+                (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (387 <= x && x <= 389) || (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -462,15 +420,12 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
-                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
-                (387 <= x && x <= 389) || (393 <= x && x <= 395)) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
         end
         else if (185 <= y && y <= 188) begin
-            if ((232 <= x && x <= 302) || (306 <= x && x <= 330)) begin
+            if ((232 <= x && x <= 302) || (306 <= x && x <= 330) ||
+                (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (387 <= x && x <= 389) ||  (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -478,15 +433,13 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
-                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
-                (387 <= x && x <= 389) ||  (393 <= x && x <= 395)) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
         end
         else if (189 <= y && y <= 190) begin
-            if ((232 <= x && x <= 301) || (305 <= x && x <= 330)) begin
+            if ((232 <= x && x <= 301) || (305 <= x && x <= 330) ||
+                (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -494,16 +447,13 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+        end
+        else if (191 <= y && y <= 192) begin
+            if ((232 <= x && x <= 299) || (303 <= x && x <= 330) ||
+                (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
                 (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
                 (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
                 (393 <= x && x <= 395)) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-        end
-        else if (191 <= y && y <= 192) begin
-            if ((232 <= x && x <= 299) || (303 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -511,16 +461,13 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+        end
+        else if (193 <= y && y <= 194) begin
+            if ((232 <= x && x <= 298) || (302 <= x && x <= 330) ||
+                (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
                 (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
                 (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
                 (393 <= x && x <= 395)) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-        end
-        else if (193 <= y && y <= 194) begin
-            if ((232 <= x && x <= 298) || (302 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -528,26 +475,16 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
-                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
-                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
-                (393 <= x && x <= 395)) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
         end
         else if (195 <= y && y <= 197) begin
-            if ((232 <= x && x <= 297) || (301 <= x && x <= 330)) begin
+            if ((232 <= x && x <= 297) || (301 <= x && x <= 330) ||
+                (342 <= x && x <= 350) || (360 <= x && x <= 368) ||
+                (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
             else if ((298 <= x && x <= 300) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if ((342 <= x && x <= 350) || (360 <= x && x <= 368) ||
-                (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
-                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
@@ -709,9 +646,9 @@ module start(
             end
         end
         else if (215 <= y && y <= 216) begin
-            if ((232 <= x && x <= 329) || (342 <= x && x <= 344) || 
-                (348 <= x && x <= 350) || (357 <= x && x <= 361) || 
-                (367 <= x && x <= 371) || (375 <= x && x <= 377)) begin
+            if ((232 <= x && x <= 329) || (342 <= x && x <= 344) || (348 <= x && x <= 350) ||
+                (357 <= x && x <= 361) || (367 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -721,9 +658,9 @@ module start(
             end
         end
         else if (217 <= y && y <= 218) begin
-            if ((232 <= x && x <= 327) || (339 <= x && x <= 341) || 
-                (351 <= x && x <= 353) || (357 <= x && x <= 361) || 
-                (367 <= x && x <= 371) || (375 <= x && x <= 377)) begin
+            if ((232 <= x && x <= 327) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 361) || (367 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -820,8 +757,7 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((233 <= x && x <= 313) || (339 <= x && x <= 341) || 
-                (351 <= x && x <= 353) ||
+            else if ((233 <= x && x <= 313) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
                 (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
                 (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
@@ -833,8 +769,7 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((234 <= x && x <= 311) || (339 <= x && x <= 341) || 
-                (351 <= x && x <= 353) ||
+            else if ((234 <= x && x <= 311) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
                 (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
                 (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
@@ -858,9 +793,9 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((235 <= x && x <= 308) || (351 <= x && x <= 353) || 
-                (357 <= x && x <= 359) ||
-                (369 <= x && x <= 371) || (375 <= x && x <= 377) || (339 <= x && x <= 341)) begin
+            else if ((235 <= x && x <= 308) || (339 <= x && x <= 341) ||
+                (351 <= x && x <= 353) || (357 <= x && x <= 359) ||
+                (369 <= x && x <= 371) || (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -942,7 +877,7 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if ((246 <= x && x <= 291) (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+            else if ((246 <= x && x <= 291) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
                 (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
                 (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
