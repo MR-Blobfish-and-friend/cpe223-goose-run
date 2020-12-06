@@ -27,9 +27,9 @@ module vga_sync
 //	reg [3:0] pixel_reg;
 //	reg pixel_next;
 //	wire pixel_tick;
-    reg [1:0] pixel_reg;
+    reg [15:0] pixel_reg;//[1:0]
 	wire [1:0] pixel_next;
-	wire pixel_tick;
+	reg pixel_tick;//wire
 	
 //	always @(posedge clk)
 //    begin
@@ -43,10 +43,13 @@ module vga_sync
 //    end
 //	assign pixel_tick = pixel_next;
 
-    always @(posedge clk)
-		  pixel_reg <= pixel_next;
-	assign pixel_next = pixel_reg + 1; // increment pixel_reg 
-	assign pixel_tick = (pixel_reg == 0);
+//    always @(posedge clk)
+//		  pixel_reg <= pixel_next;
+//	assign pixel_next = pixel_reg + 1; // increment pixel_reg 
+//	assign pixel_tick = (pixel_reg == 0);
+
+    always @(posedge clk) {pixel_tick, pixel_reg} <= pixel_reg + 16'h4000; 
+    
 	
 	// registers to keep track of current pixel location
 	reg [9:0] h_count_reg, h_count_next, v_count_reg, v_count_next;

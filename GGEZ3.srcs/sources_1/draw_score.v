@@ -30,17 +30,17 @@ module draw_score(
     integer unit, ten, hund, thou;
     
     initial begin
-        unit = 0;
-        ten = 0;
-        hund = 0;
-        thou = 0;
+        unit <= 0;
+        ten <= 0;
+        hund <= 0;
+        thou <= 0;
     end
     
     always @(score) begin
-        unit = score%10;
-        ten = (score%100)/10;
-        hund = (score%1000)/100;
-        thou = score/1000;
+        unit <= score%10;
+        ten <= (score%100)/10;
+        hund <= (score%1000)/100;
+        thou <= score/1000;
     end
     
     //current score

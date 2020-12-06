@@ -21,16 +21,14 @@
 
 
 module score_count(
-    input clk,
-    input hit,
-    input reset,
+    input clk, enable, reset,
     output [31:0] score
     );    
     integer score_reg = 0;
     
     always @(posedge clk or negedge reset) begin
-        if (reset) score_reg = 0;
-        else if (~hit) score_reg = score_reg + 1;
+        if (reset) score_reg <= 0;
+        else if (enable) score_reg <= score_reg + 1;
     end
     
     assign score = score_reg;    

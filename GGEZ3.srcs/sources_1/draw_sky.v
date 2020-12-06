@@ -32,24 +32,24 @@ module draw_sky(
         isSky = 0;
         if (0 <= x && x <= 639) begin
             if (0 <= y && y  <= 20) begin
-                rgb_reg = 12'h168;
-                isSky = 1;
+                rgb_reg <= 12'h168;
+                isSky <= 1;
             end
             else if (21 <= y && y  <= 60) begin
-                rgb_reg = 12'h28a;
-                isSky = 1;
+                rgb_reg <= 12'h28a;
+                isSky <= 1;
             end
             else if (61 <= y && y  <= 135) begin
-                rgb_reg = 12'h29c;
-                isSky = 1;
+                rgb_reg <= 12'h29c;
+                isSky <= 1;
             end
             else if (136 <= y && y  <= 235) begin
-                rgb_reg = 12'h2ad;
-                isSky = 1;
+                rgb_reg <= 12'h2ad;
+                isSky <= 1;
             end
             else if (236 <= y && y  <= 374) begin
-                rgb_reg = 12'h3be;
-                isSky = 1;
+                rgb_reg <= 12'h3be;
+                isSky <= 1;
             end
         end
     end

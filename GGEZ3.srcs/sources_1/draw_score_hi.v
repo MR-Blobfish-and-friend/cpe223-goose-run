@@ -19,29 +19,27 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module draw_score_hi(
     input [9:0] x, y,
     input [31:0] score_hi,
     output isScore,
     output [11:0] score_rgb
-    );
-    
+    );    
     wire isUnit_hi, isTen_hi, isHund_hi, isThou_hi, isH, isI;
     integer unit_hi, ten_hi, hund_hi, thou_hi;
     
     initial begin
-        unit_hi = 0;
-        ten_hi = 0;
-        hund_hi = 0;
-        thou_hi = 0;
+        unit_hi <= 0;
+        ten_hi <= 0;
+        hund_hi <= 0;
+        thou_hi <= 0;
     end
     
     always @(score_hi) begin
-        unit_hi = score_hi%10;
-        ten_hi = (score_hi%100)/10;
-        hund_hi = (score_hi%1000)/100;
-        thou_hi = score_hi/1000;
+        unit_hi <= score_hi%10;
+        ten_hi <= (score_hi%100)/10;
+        hund_hi <= (score_hi%1000)/100;
+        thou_hi <= score_hi/1000;
     end
     
     //hi score
@@ -50,10 +48,10 @@ module draw_score_hi(
     segment hund1_hi(.x(x), .y(y), .segx(505), .segy(20), .num(hund_hi), .isSeg(isHund_hi));
     segment thou1_hi(.x(x), .y(y), .segx(490), .segy(20), .num(thou_hi), .isSeg(isThou_hi));
     
-//    alphabet char_H(.x(x), .y(y), .posx(450), .posy(20), .select_char(6), .char(isH));
-//    alphabet char_I(.x(x), .y(y), .posx(450), .posy(20), .select_char(7), .char(isI));
+    //text
+    alphabet char_H(.x(x), .y(y), .posx(455), .posy(20), .select_char(3), .char(isH));
+    alphabet char_I(.x(x), .y(y), .posx(470), .posy(20), .select_char(4), .char(isI));
     
     assign isScore = isUnit_hi || isTen_hi || isHund_hi || isThou_hi || isH || isI;    
-    assign score_rgb = 12'haaa;
-    
+    assign score_rgb = 12'haaa;    
 endmodule
