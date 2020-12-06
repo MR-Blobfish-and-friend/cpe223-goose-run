@@ -44,15 +44,11 @@ module start(
             end
         end
         else if (110 <= y && y <= 111) begin
-            if (282 <= x && x <= 292) begin
+            if ((282 <= x && x <= 292) || (298 <= x && x <= 301)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
             else if (293 <= x && x <= 297) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (298 <= x && x <= 301) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -62,15 +58,11 @@ module start(
             end
         end
         else if (y == 112) begin
-            if (279 <= x && x <= 292) begin
+            if ((279 <= x && x <= 292) || (298 <= x && x <= 301)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
             else if (293 <= x && x <= 297) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (298 <= x && x <= 301) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -80,15 +72,11 @@ module start(
             end
         end
         else if (y == 113) begin
-            if (236 <= x && x <= 292) begin
+            if ((236 <= x && x <= 292) || (298 <= x && x <= 301)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
             else if (293 <= x && x <= 297) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (298 <= x && x <= 301) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -272,350 +260,134 @@ module start(
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (245 <= x && x <= 249) begin
+            else if ((245 <= x && x <= 249) || (x == 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (x == 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (342 <= x && x <= 350) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (360 <= x && x <= 368) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (378 <= x && x <= 386) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 407) begin
-                rgb_reg = 12'h000;
+            else if ((342 <= x && x <= 350) || (360 <= x && x <= 368) || 
+                    (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
+                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
         else if (y == 169) begin
-            if (232 <= x && x <= 244) begin
+            if ((232 <= x && x <= 244) || (271 <= x && x <= 286)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (245 <= x && x <= 249) begin
+            else if ((245 <= x && x <= 249) || (332 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (271 <= x && x <= 286) begin
+            else if ((342 <= x && x <= 350) || (360 <= x && x <= 368) ||
+                    (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (332 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (342 <= x && x <= 350) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (360 <= x && x <= 368) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (378 <= x && x <= 386) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 407) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 170) begin
-            if (232 <= x && x <= 244) begin
+            if ((232 <= x && x <= 244) || (265 <= x && x <= 295) ||
+                (x == 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (245 <= x && x <= 249) begin
+            else if ((245 <= x && x <= 249) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (265 <= x && x <= 295) begin
+            else if ((342 <= x && x <= 350) || (360 <= x && x <= 368) ||
+                    (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (x == 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (342 <= x && x <= 350) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (360 <= x && x <= 368) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (378 <= x && x <= 386) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 407) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 171) begin
-            if (232 <= x && x <= 244) begin
+            if ((232 <= x && x <= 244) || (262 <= x && x <= 303) ||
+                (329 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (245 <= x && x <= 249) begin
+            else if ((245 <= x && x <= 249) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (262 <= x && x <= 303) begin
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) || 
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) || 
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (329 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (387 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 172) begin
-            if (232 <= x && x <= 244) begin
+            if ((232 <= x && x <= 244) || (258 <= x && x <= 310) ||
+                (328 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (245 <= x && x <= 249) begin
+            else if ((245 <= x && x <= 249) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (258 <= x && x <= 310) begin
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) || 
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (328 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (387 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 173) begin
-            if (232 <= x && x <= 244) begin
+            if ((232 <= x && x <= 244) || (255 <= x && x <= 313) ||
+                (328 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (245 <= x && x <= 249) begin
+            else if ((245 <= x && x <= 249) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (255 <= x && x <= 313) begin
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (328 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (387 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 174) begin
-            if (232 <= x && x <= 244) begin
+            if ((232 <= x && x <= 244) || (253 <= x && x <= 315) ||
+                (326 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (245 <= x && x <= 249) begin
+            else if ((245 <= x && x <= 249) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (253 <= x && x <= 315) begin
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (326 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (387 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 175) begin
-            if (232 <= x && x <= 244) begin
+            if ((232 <= x && x <= 244) || (251 <= x && x <= 317) ||
+                (324 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (245 <= x && x <= 249) begin
+            else if ((245 <= x && x <= 249) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (251 <= x && x <= 317) begin
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (324 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (387 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
@@ -628,32 +400,11 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (387 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
+                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
@@ -666,28 +417,10 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (393 <= x && x <= 395)) begin
+                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
@@ -700,653 +433,285 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (378 <= x && x <= 386) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 407) begin
-                rgb_reg = 12'h000;
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
+                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
         else if (y == 183) begin
-            if (232 <= x && x <= 269) begin
+            if ((232 <= x && x <= 269) || (304 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (270 <= x && x <= 302) begin
+            else if ((270 <= x && x <= 302) || (331 <= x && x <= 333) ||
+                (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
                 rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (303 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (378 <= x && x <= 386) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 407) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 184) begin
-            if (232 <= x && x <= 266) begin
+            if ((232 <= x && x <= 266) || (305 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (267 <= x && x <= 304) begin
+            else if ((267 <= x && x <= 304) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (305 <= x && x <= 330) begin
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (387 <= x && x <= 389) || (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (387 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (185 <= y && y <= 188) begin
-            if (232 <= x && x <= 302) begin
+            if ((232 <= x && x <= 302) || (306 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (303 <= x && x <= 305) begin
+            else if ((303 <= x && x <= 305) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (306 <= x && x <= 330) begin
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (387 <= x && x <= 389) ||  (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (387 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (189 <= y && y <= 190) begin
-            if (232 <= x && x <= 301) begin
+            if ((232 <= x && x <= 301) || (305 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (302 <= x && x <= 304) begin
+            else if ((302 <= x && x <= 304) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (305 <= x && x <= 330) begin
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (387 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (191 <= y && y <= 192) begin
-            if (232 <= x && x <= 299) begin
+            if ((232 <= x && x <= 299) || (303 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (300 <= x && x <= 302) begin
+            else if ((300 <= x && x <= 302) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (303 <= x && x <= 330) begin
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (387 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (193 <= y && y <= 194) begin
-            if (232 <= x && x <= 298) begin
+            if ((232 <= x && x <= 298) || (302 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (299 <= x && x <= 301) begin
+            else if ((299 <= x && x <= 301) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (302 <= x && x <= 330) begin
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377) || (387 <= x && x <= 389) ||
+                (393 <= x && x <= 395)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (387 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 395) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (195 <= y && y <= 197) begin
-            if (232 <= x && x <= 297) begin
+            if ((232 <= x && x <= 297) || (301 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (298 <= x && x <= 300) begin
+            else if ((298 <= x && x <= 300) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (301 <= x && x <= 330) begin
+            else if ((342 <= x && x <= 350) || (360 <= x && x <= 368) ||
+                (378 <= x && x <= 386) || (393 <= x && x <= 407)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (342 <= x && x <= 350) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (360 <= x && x <= 368) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (378 <= x && x <= 386) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (393 <= x && x <= 407) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 198) begin
-            if (232 <= x && x <= 295) begin
+            if ((232 <= x && x <= 295) || (300 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (296 <= x && x <= 299) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (300 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((296 <= x && x <= 299) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (y == 199) begin
-            if (232 <= x && x <= 294) begin
+            if ((232 <= x && x <= 294) || (299 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (295 <= x && x <= 298) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (299 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((295 <= x && x <= 298) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (y == 200) begin
-            if (232 <= x && x <= 293) begin
+            if ((232 <= x && x <= 293) || (298 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (294 <= x && x <= 297) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (298 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((294 <= x && x <= 297) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (y == 201) begin
-            if (232 <= x && x <= 292) begin
+            if ((232 <= x && x <= 292) || (297 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (293 <= x && x <= 296) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (297 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((293 <= x && x <= 296) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (y == 202) begin
-            if (232 <= x && x <= 291) begin
+            if ((232 <= x && x <= 291) || (296 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (292 <= x && x <= 295) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (296 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((292 <= x && x <= 295) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (y == 203) begin
-            if (232 <= x && x <= 290) begin
+            if ((232 <= x && x <= 290) || (295 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (291 <= x && x <= 294) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (295 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((291 <= x && x <= 294) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (y == 204) begin
-            if (232 <= x && x <= 289) begin
+            if ((232 <= x && x <= 289) || (294 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (290 <= x && x <= 293) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (294 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((290 <= x && x <= 293) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (y == 205) begin
-            if (232 <= x && x <= 288) begin
+            if ((232 <= x && x <= 288) || (293 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (289 <= x && x <= 292) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (293 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((289 <= x && x <= 292) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (y == 206) begin
-            if (232 <= x && x <= 286) begin
+            if ((232 <= x && x <= 286) || (291 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (287 <= x && x <= 290) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (291 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((287 <= x && x <= 290) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (y == 207) begin
-            if (232 <= x && x <= 286) begin
+            if ((232 <= x && x <= 286) || (291 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (285 <= x && x <= 290) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (291 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((285 <= x && x <= 290) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (y == 208) begin
-            if (232 <= x && x <= 282) begin
+            if ((232 <= x && x <= 282) || (289 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (283 <= x && x <= 288) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (289 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((283 <= x && x <= 288) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (209 <= y && y <= 210) begin
-            if (232 <= x && x <= 279) begin
+            if ((232 <= x && x <= 279) || (287 <= x && x <= 330)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (280 <= x && x <= 286) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (287 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
+            else if ((280 <= x && x <= 286) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
         end
         else if (211 <= y && y <= 212) begin
-            if (232 <= x && x <= 271) begin
+            if ((232 <= x && x <= 271) || (283 <= x && x <= 330) ||
+                (345 <= x && x <= 347) || (357 <= x && x <= 359) ||
+                (369 <= x && x <= 371) || (375 <= x && x <= 389)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (272 <= x && x <= 282) begin
+            else if ((272 <= x && x <= 282) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (283 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (345 <= x && x <= 347) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 213) begin
-            if (232 <= x && x <= 263) begin
+            if ((232 <= x && x <= 263) || (278 <= x && x <= 330) ||
+                (345 <= x && x <= 347) || (357 <= x && x <= 359) ||
+                (369 <= x && x <= 371) || (375 <= x && x <= 389)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (264 <= x && x <= 277) begin
+            else if ((264 <= x && x <= 277) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (278 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (345 <= x && x <= 347) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 214) begin
-            if (232 <= x && x <= 263) begin
+            if ((232 <= x && x <= 263) || (274 <= x && x <= 330) ||
+                (342 <= x && x <= 344) || (348 <= x && x <= 350) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
-            else if (264 <= x && x <= 273) begin
+            else if ((264 <= x && x <= 273) || (331 <= x && x <= 333)) begin
                 rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (274 <= x && x <= 330) begin
-                rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (331 <= x && x <= 333) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (342 <= x && x <= 344) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (348 <= x && x <= 350) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (215 <= y && y <= 216) begin
-            if (232 <= x && x <= 329) begin
+            if ((232 <= x && x <= 329) || (342 <= x && x <= 344) || 
+                (348 <= x && x <= 350) || (357 <= x && x <= 361) || 
+                (367 <= x && x <= 371) || (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -1354,29 +719,11 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (342 <= x && x <= 344) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (348 <= x && x <= 350) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 361) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (367 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
         end
         else if (217 <= y && y <= 218) begin
-            if (232 <= x && x <= 327) begin
+            if ((232 <= x && x <= 327) || (339 <= x && x <= 341) || 
+                (351 <= x && x <= 353) || (357 <= x && x <= 361) || 
+                (367 <= x && x <= 371) || (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -1384,29 +731,11 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 361) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (367 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
         end
         else if (219 <= y && y <= 220) begin
-            if (232 <= x && x <= 325) begin
+            if ((232 <= x && x <= 325) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 362) || (366 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -1414,29 +743,11 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 362) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (366 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
         end
         else if (y == 221) begin
-            if (232 <= x && x <= 323) begin
+            if ((232 <= x && x <= 323) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 362) || (366 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -1444,29 +755,11 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 362) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (366 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
         end
         else if (y == 222) begin
-            if (232 <= x && x <= 323) begin
+            if ((232 <= x && x <= 323) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (362 <= x && x <= 366) ||
+                (369 <= x && x <= 371) || (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -1474,33 +767,11 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (362 <= x && x <= 366) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
         end
         else if (y == 223) begin
-            if (232 <= x && x <= 321) begin
+            if ((232 <= x && x <= 321) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (362 <= x && x <= 366) ||
+                (369 <= x && x <= 371) || (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -1508,33 +779,11 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (362 <= x && x <= 366) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
         end
         else if (y == 224) begin
-            if (232 <= x && x <= 321) begin
+            if ((232 <= x && x <= 321) || (339 <= x && x <= 353) || (357 <= x && x <= 359) ||
+                (363 <= x && x <= 365) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 389)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -1542,29 +791,11 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (363 <= x && x <= 365) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
         end
         else if (y == 225) begin
-            if (232 <= x && x <= 318) begin
+            if ((232 <= x && x <= 318) || (339 <= x && x <= 353) || (357 <= x && x <= 359) ||
+                (363 <= x && x <= 365) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 389)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -1572,29 +803,10 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (363 <= x && x <= 365) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
         end
         else if (y == 226) begin
-            if (232 <= x && x <= 315) begin
+            if ((232 <= x && x <= 315) || (339 <= x && x <= 353) || (357 <= x && x <= 359) ||
+                (369 <= x && x <= 371) || (375 <= x && x <= 389)) begin
                 rgb_reg = 12'hfff;
                 isStart = 1;
             end
@@ -1602,394 +814,138 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
         end
         else if (y == 227) begin
-            if (x == 232) begin
+            if ((x == 232) || (314 <= x && x <= 319)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (233 <= x && x <= 313) begin
+            else if ((233 <= x && x <= 313) || (339 <= x && x <= 341) || 
+                (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (314 <= x && x <= 319) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 228) begin
-            if (232 <= x && x <= 233) begin
+            if ((232 <= x && x <= 233) || (312 <= x && x <= 317)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (234 <= x && x <= 311) begin
+            else if ((234 <= x && x <= 311) || (339 <= x && x <= 341) || 
+                (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (312 <= x && x <= 317) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 229) begin
-            if (232 <= x && x <= 233) begin
+            if ((232 <= x && x <= 233) || (311 <= x && x <= 315)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (234 <= x && x <= 310) begin
+            else if ((234 <= x && x <= 310) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (311 <= x && x <= 315) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 230) begin
-            if (232 <= x && x <= 234) begin
+            if ((232 <= x && x <= 234) || (309 <= x && x <= 313)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (235 <= x && x <= 308) begin
+            else if ((235 <= x && x <= 308) || (351 <= x && x <= 353) || 
+                (357 <= x && x <= 359) ||
+                (369 <= x && x <= 371) || (375 <= x && x <= 377) || (339 <= x && x <= 341)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (309 <= x && x <= 313) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 231) begin
-            if (232 <= x && x <= 235) begin
+            if ((232 <= x && x <= 235) || (307 <= x && x <= 311)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (236 <= x && x <= 306) begin
+            else if ((236 <= x && x <= 306) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (307 <= x && x <= 311) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 232) begin
-            if (233 <= x && x <= 236) begin
+            if ((233 <= x && x <= 236) || (305 <= x && x <= 309)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (237 <= x && x <= 304) begin
+            else if ((237 <= x && x <= 304) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (305 <= x && x <= 309) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 233) begin
-            if (233 <= x && x <= 238) begin
+            if ((233 <= x && x <= 238) || (303 <= x && x <= 307)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (239 <= x && x <= 302) begin
+            else if ((239 <= x && x <= 302) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (303 <= x && x <= 307) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 234) begin
-            if (234 <= x && x <= 239) begin
+            if ((234 <= x && x <= 239) || (301 <= x && x <= 305)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (240 <= x && x <= 300) begin
+            else if ((240 <= x && x <= 300) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (301 <= x && x <= 305) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 235) begin
-            if (236 <= x && x <= 240) begin
+            if ((236 <= x && x <= 240) || (299 <= x && x <= 303)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (241 <= x && x <= 298) begin
+            else if ((241 <= x && x <= 298) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (299 <= x && x <= 303) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 236) begin
-            if (238 <= x && x <= 242) begin
+            if ((238 <= x && x <= 242) || (296 <= x && x <= 301)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (243 <= x && x <= 295) begin
+            else if ((243 <= x && x <= 295) || (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (296 <= x && x <= 301) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
         else if (y == 237) begin
-            if (240 <= x && x <= 245) begin
+            if ((240 <= x && x <= 245) || (292 <= x && x <= 299)) begin
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (246 <= x && x <= 291) begin
+            else if ((246 <= x && x <= 291) (339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 377)) begin
                 rgb_reg = 12'hfff;
-                isStart = 1;
-            end
-            else if (292 <= x && x <= 299) begin
-                rgb_reg = 12'hdef;
-                isStart = 1;
-            end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 377) begin
-                rgb_reg = 12'h000;
                 isStart = 1;
             end
         end
@@ -1998,24 +954,10 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 389)) begin
+                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
@@ -2024,24 +966,10 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 389)) begin
+                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
@@ -2050,24 +978,10 @@ module start(
                 rgb_reg = 12'hdef;
                 isStart = 1;
             end
-            else if (339 <= x && x <= 341) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (351 <= x && x <= 353) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (357 <= x && x <= 359) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (369 <= x && x <= 371) begin
-                rgb_reg = 12'h000;
-                isStart = 1;
-            end
-            else if (375 <= x && x <= 389) begin
-                rgb_reg = 12'h000;
+            else if ((339 <= x && x <= 341) || (351 <= x && x <= 353) ||
+                (357 <= x && x <= 359) || (369 <= x && x <= 371) ||
+                (375 <= x && x <= 389)) begin
+                rgb_reg = 12'hfff;
                 isStart = 1;
             end
         end
